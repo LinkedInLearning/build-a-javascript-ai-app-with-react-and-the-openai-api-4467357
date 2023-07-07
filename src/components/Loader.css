@@ -1,0 +1,27 @@
+.loader {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  background: hsl(0, 0%, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.loader p {
+  font-size: 3rem;
+  font-weight: 200;
+  animation: blink 0.6s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}

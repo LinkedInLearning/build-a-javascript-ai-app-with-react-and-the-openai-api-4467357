@@ -1,0 +1,33 @@
+#root {
+  margin: 4rem;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem;
+}
+
+.header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: hsl(0, 0%, 95%);
+}
+
+.page-title {
+  font-size: 4rem;
+  font-weight: 100;
+  margin: 1rem 0 2rem;
+  text-align: center;
+}
+
+.main-content {
+  width: 100%;
+}

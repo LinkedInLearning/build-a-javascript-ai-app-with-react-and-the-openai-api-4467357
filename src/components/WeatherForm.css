@@ -1,0 +1,49 @@
+.locationform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  height: 100%;
+  justify-content: space-evenly;
+  margin-block-start: 0;
+}
+
+.locationform__elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.locationform__elements label {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.locationform__elements input[type="text"] {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  margin-block: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+.locationform__elements input[type="submit"] {
+  padding: 0.8rem 1.4rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #0077ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.instructions {
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
