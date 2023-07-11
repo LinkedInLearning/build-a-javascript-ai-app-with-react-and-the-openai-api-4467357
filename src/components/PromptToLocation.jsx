@@ -64,7 +64,27 @@ const PromptToLocation = (prompt) => {
   return fetch(url, params)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      const promptRes = JSON.parse(
+        data.choices[0].message.function_call.arguments
+      );
+      console.log(promptRes);
+
+      const locationString = () => {
+        if (promptRes.countryCode === "US") {
+          return `${promptRes.city},${promptRes.state},${promptRes.country}`;
+        } else {
+          return `${promptRes.city},${promptRes.country}`;
+        }
+      };
+
+      const promptData = {
+        locationString: locationString(),
+        units: promptRes.unit,
+        country: promptRes.country,
+        USstate: promptRes.USstate
+      }
+
+      return promptData;
     })
     .catch((error) => {
       console.log("Error:", error);
