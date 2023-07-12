@@ -50,12 +50,9 @@ function App() {
         <WeatherForm onSubmit={handleSubmit} />
         {error && <p className="error">{errorMsg.message}</p>}
         {weatherDescription ? (
-          <Description
-            isLoading={weatherDescriptionLoading}
-            weatherDescription={weatherDescription}
-          />
+          <Description weatherDescription={weatherDescription} />
         ) : (
-          <Description isLoading={weatherDescriptionLoading} />
+          <Description />
         )}
       </header>
       <main className="main-content">
