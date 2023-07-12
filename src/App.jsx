@@ -3,6 +3,7 @@ import "./App.css";
 import useApiRequests from "./components/useApiRequests";
 import WeatherForm from "./components/WeatherForm";
 import WeatherCard from "./components/WeatherCard";
+import Description from "./components/Description";
 
 function App() {
   const [prompt, setPrompt] = useState("");
@@ -48,6 +49,14 @@ function App() {
         <h1 className="page-title">Current Weather</h1>
         <WeatherForm onSubmit={handleSubmit} />
         {error && <p className="error">{errorMsg.message}</p>}
+        {weatherDescription ? (
+          <Description
+            isLoading={weatherDescriptionLoading}
+            weatherDescription={weatherDescription}
+          />
+        ) : (
+          <Description isLoading={weatherDescriptionLoading} />
+        )}
       </header>
       <main className="main-content">
         {weatherData.name && !errorMsg ? (
