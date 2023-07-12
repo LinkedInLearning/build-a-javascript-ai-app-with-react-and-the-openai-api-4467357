@@ -12,7 +12,7 @@ function App() {
   const [errorMsg, setErrorMsg] = useState("");
 
   // Custom hook to handle API requests. Fires when prompt changes.
-  const { error, promptData, locationData, weatherData } =
+  const { error, promptData, locationData, weatherData, weatherDescription } =
     useApiRequests(prompt);
 
   // Set error message if error is returned from API request.

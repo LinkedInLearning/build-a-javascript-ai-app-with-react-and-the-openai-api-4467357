@@ -43,7 +43,7 @@ const useApiRequests = (prompt) => {
     fetchData();
   }, [prompt]); // run effect when `prompt` changes
 
-  return { error, promptData, locationData, weatherData };
+  return { error, promptData, locationData, weatherData, weatherDescription };
 };
 
 useApiRequests.propTypes = {
