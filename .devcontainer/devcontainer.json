@@ -13,8 +13,8 @@
   // Trigger actions on ports. More info: https://containers.dev/implementors/json_reference/#port-attributes
   "portsAttributes": {
     "5173": {
-      "label": "Vite port"
-      // "onAutoForward": "openBrowser"
+      "label": "Vite port",
+      "onAutoForward": "openPreview"
     }
   },
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
